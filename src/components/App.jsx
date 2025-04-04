@@ -10,7 +10,7 @@ function App() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const fecthAPI = async () => {
-    const response = await axios.get("https://dream11server-7ar3.vercel.app/");
+    const response = await axios.get("http://localhost:3000/");
     setContestants(response.data);
     console.log(response.data);
   };
@@ -28,8 +28,8 @@ function App() {
             <ContestantTile
               contactName={contestant.contestantname}
               contactImage={contestant.photoname}
-              amountSpent={parseFloat(contestant.amountspent.substring(1))}
-              amountWon={parseFloat(contestant.amountwon.substring(1))}
+              amountSpent={contestant.amountspent}
+              amountWon={contestant.amountwon}
               profit={contestant.profit.replace(/[^0-9\.-]+/g, "")}
               position={contestant.position}
             />
