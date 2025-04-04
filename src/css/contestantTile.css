@@ -1,0 +1,26 @@
+.profile-img {
+  height: 200px;
+}
+
+.profit {
+  color: green;
+}
+
+.loss {
+  color: red;
+}
+
+.goldmedal {
+  font-size: x-large;
+  color: gold;
+}
+
+.silvermedal {
+  font-size: x-large;
+  color: silver;
+}
+
+.bronzemedal {
+  font-size: x-large;
+  color: brown;
+}
