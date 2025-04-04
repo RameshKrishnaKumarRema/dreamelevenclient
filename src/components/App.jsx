@@ -10,7 +10,7 @@ function App() {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const fecthAPI = async () => {
-    const response = await axios.get("http://localhost:3000/");
+    const response = await axios.get("https://dream11server-7ar3.vercel.app/");
     setContestants(response.data);
     console.log(response.data);
   };
