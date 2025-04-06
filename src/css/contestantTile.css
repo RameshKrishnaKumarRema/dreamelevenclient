@@ -24,3 +24,10 @@
   font-size: x-large;
   color: brown;
 }
+
+.rowposition1 {
+  background-color: greenyellow;
+}
+#myrows .row-odd {
+  background-color: #bde3fb;
+}

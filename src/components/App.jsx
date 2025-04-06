@@ -4,15 +4,17 @@ import axios from "axios";
 import { Header } from "./Header";
 import ContestantTile from "./ContestantTile";
 import Footer from "./Footer";
+import Border from "./Border";
+import PointsTable from "./PointsTable";
 
 function App() {
   const [contestants, setContestants] = useState([]);
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [pointsTable, setPointsTable] = useState([]);
 
   const fecthAPI = async () => {
     const response = await axios.get("https://dream11server-7ar3.vercel.app/");
-    setContestants(response.data);
-    console.log(response.data);
+    setContestants(response.data.contestantTile);
+    setPointsTable(response.data.pointsTable);
   };
 
   useEffect(() => {
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       <div class="container py-3">
-        <Header lastUpdatedDate={currentDate.toLocaleDateString()} />
+        <Header />
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           {contestants.map((contestant) => (
             <ContestantTile
@@ -35,6 +37,8 @@ function App() {
             />
           ))}
         </div>
+        <Border />
+        <PointsTable pointDetails={pointsTable} />
         <Footer />
       </div>
     </>

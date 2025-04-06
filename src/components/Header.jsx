@@ -13,8 +13,11 @@ function Header(props) {
         </a>
 
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">
-            Last Updated on : {props.lastUpdatedDate}
+          <a class="me-5 py-2 link-body-emphasis text-decoration-none" href="#">
+            Home
+          </a>
+          <a class="me-1 py-2 link-body-emphasis text-decoration-none" href="#">
+            Points Table
           </a>
         </nav>
       </div>
