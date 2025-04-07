@@ -12,7 +12,7 @@ function App() {
   const [pointsTable, setPointsTable] = useState([]);
 
   const fecthAPI = async () => {
-    const response = await axios.get("https://dream11server-7ar3.vercel.app/");
+    const response = await axios.get("http://localhost:3000/");
     setContestants(response.data.contestantTile);
     setPointsTable(response.data.pointsTable);
   };

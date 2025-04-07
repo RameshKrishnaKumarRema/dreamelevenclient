@@ -13,7 +13,7 @@ function PointsTable({ pointDetails }) {
       <thead>
         <tr class="text-center">
           {headers.map((header) => {
-            if (header === "matchid") {
+            if (header === "row_num") {
               header = "Sl No";
             } else if (header === "hometeam") {
               header = "Home";
