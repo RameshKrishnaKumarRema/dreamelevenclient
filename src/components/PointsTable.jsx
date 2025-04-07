@@ -33,6 +33,9 @@ function PointsTable({ pointDetails }) {
             <tr key={index} class="text-center">
               {headers.map((header, colIndex) => {
                 const cellValue = row[header.toLowerCase()];
+                if (row[header] === 0) {
+                  row[header] = "NP";
+                }
 
                 // Apply green background only if cell value === 1
                 let cellStyle;
@@ -44,8 +47,6 @@ function PointsTable({ pointDetails }) {
                     cellStyle = { backgroundColor: "#9FE2BF" };
                   } else if (row[header] === 3) {
                     cellStyle = { backgroundColor: "#AFE1AF" };
-                  } else if (row[header] === 0) {
-                    row[header] = "NP";
                   } else if (row[header] === "NP") {
                     cellStyle = { backgroundColor: "#f5bc7b" };
                   } else {
