@@ -1,4 +1,5 @@
 import React from "react";
+import LastFiveMatches from "./LastFiveMatch";
 
 function ContestantTile(props) {
   return (
@@ -41,9 +42,10 @@ function ContestantTile(props) {
             )}
             {props.position == 0 && <li>Ranking : {props.position} </li>}
             {props.position > 3 && <li>Ranking : {props.position} </li>}
+            <li class="mt-2 text-secondary">Last Five Results</li>
+            <LastFiveMatches fivematches={props.lastFivePositions} />
             <li>Total Amount Spent : &#x20B9; {props.amountSpent} </li>
             <li>Total Amount Won : &#x20B9; {props.amountWon} </li>
-
             {props.profit > 0 ? (
               <li className="profit">
                 Profit : &#x20B9; {props.profit}{" "}
